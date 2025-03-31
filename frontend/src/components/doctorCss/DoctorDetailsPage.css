@@ -1,0 +1,129 @@
+/* Main container */
+.container {
+    background-color: white;
+    padding: 20px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Doctor details wrapper */
+.doctor-details-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Doctor image container */
+.doctor-image-container {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #ffffff, #f4f4f4);
+    overflow: hidden;
+}
+
+/* Doctor image styling */
+.doctor-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-image:hover {
+    transform: scale(1.1);
+}
+
+/* Doctor info container */
+.doctor-info-container {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 1px solid #E1E1E1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-info-container:hover {
+    transform: scale(1.02);
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #073418;
+    font-weight: 700;
+}
+
+/* Description styling */
+.description {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Doctor fee styling */
+.fee {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #28A745;
+}
+
+/* Button container */
+.button-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Book Appointment button styling */
+.book-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .doctor-image-container,
+    .doctor-info-container {
+        width: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+    .doctor-image-container,
+    .doctor-info-container {
+        width: 100%;
+    }
+}

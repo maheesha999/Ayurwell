@@ -1,0 +1,70 @@
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .table-data {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-row:hover {
+    background-color: #ddd;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-button,
+  .edit-button,
+  .delete-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .view-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .edit-button {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .hidden-md {
+    display: table-cell;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hidden-md {
+      display: none;
+    }
+  
+    .operations-column {
+      text-align: center;
+    }
+  }
+  

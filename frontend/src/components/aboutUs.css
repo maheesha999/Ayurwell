@@ -1,0 +1,36 @@
+/* aboutUs.css */
+
+/* Set the background color of the whole page to white */
+.bg-white {
+    background-color: white;
+  }
+  .about-us-page, .content, .container {
+    color: white; /* Set text color to white */
+  }
+  /* Style for the category boxes to change color on hover */
+  .category-box {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 16px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #4B5563; /* Gray text color */
+    cursor: pointer;
+   
+  }
+  
+  /* Change color to green on hover */
+  .category-box:hover {
+    background-color: #34D399; /* Green background */
+    color: white; /* White text color */
+  }
+  
+  /* Additional styling for the category box content */
+  .category-box b {
+    font-weight: bold;
+  }
+  
