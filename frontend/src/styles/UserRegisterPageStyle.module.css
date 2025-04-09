@@ -1,0 +1,21 @@
+.bodyDiv{
+    background:linear-gradient(to right, rgb(252, 252, 252), rgb(114 102 201 / 62%));
+    position: absolute;
+    width: 100%;
+}
+.rowDiv{
+    width:85%;
+    margin: 5% auto;
+    border-radius: 20px;
+    height: 720px;
+}
+.leftDiv{
+    background-color: rgb(115 103 198);
+    border-radius: 20px 0 0 20px;
+}
+.rightDiv{
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 20px 20px 0;
+    padding: 5%
+}
+
