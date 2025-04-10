@@ -39,7 +39,7 @@ function App() {
             <Route path="/login" element={<UserLoginPage />} />
           </Route>
 
-          {/*User Routes*/}
+        
           
           {/*User Routes*/}
           <Route path="" element={<UserPrivateRoute />}>
