@@ -37,5 +37,10 @@ PhotoVerse is a full-stack social media platform built with **Spring Boot (Java)
 - JWT (for secure authentication)
 
 
+### Team Members:
 
+- **Maheesha Liyanage**
+- **Nesha Dharmarathna**
+- **Dasun Dananjaya**
+- **Diluka Athukorala**
 
