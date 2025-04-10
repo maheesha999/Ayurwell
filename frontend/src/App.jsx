@@ -40,6 +40,8 @@ function App() {
           </Route>
 
           {/*User Routes*/}
+          
+          {/*User Routes*/}
           <Route path="" element={<UserPrivateRoute />}>
             <Route index={true} path="/" element={<HomePage />} />
             <Route path="/WorkoutPlans" element={<HomeWorkoutPlans />} />
