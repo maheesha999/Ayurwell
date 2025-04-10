@@ -55,7 +55,7 @@ import { storage } from "../Config/FireBaseConfig.js";
 import { getDownloadURL, ref, uploadBytes, deleteObject } from "firebase/storage";
 import { v4 } from "uuid";
 
-
+//transition for the dialog
 //transition for the dialog
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
