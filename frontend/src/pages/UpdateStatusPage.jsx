@@ -11,7 +11,7 @@ const UpdateStatus = () => {
   const {id}  = useParams();     //ID Passingg
 
   //const id = '663cc31b64978148903772b1';      //Temporily Fetching id
-  
+     //Temporily Fetching id
   const [user, setUser] = useState('');
   const [description, setDescription] = useState('');
   const [distanceRan, setDistanceRan] = useState(0); // Changed to number
