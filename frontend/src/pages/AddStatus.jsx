@@ -44,6 +44,7 @@ const AddStatus = () => {
 
   const validateWorkoutMetrics = (value) => {
     // Regular expression for xxxx-xxxx format
+      // Regular expression for xxxx-xxxx format
     const regex = /^[0-9]{4}-[0-9]{4}$/;
     return regex.test(value);
   };

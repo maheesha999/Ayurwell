@@ -34,6 +34,7 @@ function App() {
       <Router>
         <Routes>
           {/*Public Routes*/}
+          {/*Public Routes*/}
           <Route path="" element={<PublicRoutes />}>
             <Route path="/register" element={<UserRegisterPage />} />
             <Route path="/login" element={<UserLoginPage />} />
