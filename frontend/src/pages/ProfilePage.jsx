@@ -71,8 +71,7 @@ const ProfilePage = () => {
         const selectedImage = event.target.files[0];
         setImage(selectedImage);
 
-        // Preview the selected image
-       
+        // Preview the selected image 
         const reader = new FileReader();
         reader.onload = () => {
             if (reader.readyState === 2) {

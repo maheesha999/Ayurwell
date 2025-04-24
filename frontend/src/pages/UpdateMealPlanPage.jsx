@@ -91,7 +91,7 @@ const UpdateMealPlanPage = () => {
   };
   const handleImageClick = () => {
     // Trigger the file input dialog when image is clicked
-     // Trigger the file input dialog when image is clicked
+   
     document.getElementById('imageInput').click();
   };
 
