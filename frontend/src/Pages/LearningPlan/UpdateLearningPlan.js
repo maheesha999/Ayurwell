@@ -27,6 +27,7 @@ function UpdateLearningPost() {
   const [showImageUploadInput, setShowImageUploadInput] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+   {/* Keep template preview container as is */}
 
   useEffect(() => {
     const fetchPost = async () => {
