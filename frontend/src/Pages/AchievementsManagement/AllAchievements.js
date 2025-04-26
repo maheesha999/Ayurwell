@@ -20,7 +20,7 @@ function AllAchievements() {
     fetch('http://localhost:8080/achievements')
       .then((response) => response.json())
       .then((data) => {
-        setProgressData(data);// Initially show all data
+        setProgressData(data);
         setFilteredData(data); // Initially show all data
       })
       .catch((error) => console.error('Error fetching Achievements data:', error));
