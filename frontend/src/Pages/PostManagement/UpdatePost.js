@@ -6,7 +6,7 @@ import './AddNewPost.css';  // Add this import to use same styles
 
 function UpdatePost() {
   const { id } = useParams(); // Get the post ID from the URL
-  const navigate = useNavigate();//navigate
+  const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState(''); // New state for category

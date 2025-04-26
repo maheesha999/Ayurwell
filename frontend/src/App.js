@@ -35,7 +35,7 @@ function App() {
     if (window.location.pathname === "/oauth2/success") {
       const params = new URLSearchParams(window.location.search);
       const userID = params.get("userID");
-      const name = params.get("name");
+      const name = params.get("name");//name
       const googleProfileImage = decodeURIComponent(params.get("googleProfileImage")); // Decode the URL
 
       if (userID && name) {
