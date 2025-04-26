@@ -9,7 +9,7 @@ function AddAchievements() {
     date: '',
     postOwnerID: '',
     category: '',
-    postOwnerName: '',//owner
+    postOwnerName: '',
   });
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
