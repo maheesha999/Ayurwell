@@ -7,7 +7,7 @@ function AddAchievements() {
     title: '',
     description: '',
     date: '',
-    postOwnerID: '',//id
+    postOwnerID: '',
     category: '',
     postOwnerName: '',
   });
