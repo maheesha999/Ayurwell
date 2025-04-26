@@ -8,6 +8,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import { HiCalendarDateRange } from "react-icons/hi2";
 
  {/* Keep template preview container as is */}
+ 
 function AllLearningPlan() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);

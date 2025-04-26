@@ -162,7 +162,7 @@ function AddLearningPlan() {
         margin: '20px auto',
         padding: '0 15px'
       }}>
-        {/* Keep template preview container as is */}
+
          {/* Keep template preview container as is */}
         <div className="template-preview-container">
           {/* Template 1 */}

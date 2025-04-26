@@ -614,7 +614,7 @@ function MyLearningPlan() {
           >
             <IoIosCreate className='add_new_btn_icon' style={{ fontSize: '24px' }}/>
           </div>
-           {/* Keep template preview container as is */}
+   
           
           <div className='post_card_continer'>
             {filteredPosts.length === 0 ? (
