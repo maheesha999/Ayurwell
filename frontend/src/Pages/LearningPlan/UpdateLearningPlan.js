@@ -72,7 +72,7 @@ function UpdateLearningPost() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    processImageFile(file);
+    processImageFile(file);//image
   };
 
   const processImageFile = (file) => {
