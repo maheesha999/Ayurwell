@@ -120,7 +120,7 @@ function AddNewPost() {
     }
     
     if (media.length === 0) {
-      alert('Please upload at least one media file');//commmited
+      alert('Please upload at least one media file');
       return;
     }
     
