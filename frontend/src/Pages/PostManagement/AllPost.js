@@ -20,7 +20,7 @@ function AllPost() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [postOwners, setPostOwners] = useState({});
-  const [showMyPosts, setShowMyPosts] = useState(false);
+  const [showMyPosts, setShowMyPosts] = useState(false);//state
   const [isModalOpen, setIsModalOpen] = useState(false);// State to track followed model
   const [selectedMedia, setSelectedMedia] = useState(null);
   const [followedUsers, setFollowedUsers] = useState([]); // State to track followed users
@@ -34,7 +34,7 @@ function AllPost() {
     // Fetch all posts from the backend
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/posts');
+        const response = await axios.get('http://localhost:8080/posts');//link 
         setPosts(response.data);
         setFilteredPosts(response.data); // Initially show all posts
 
