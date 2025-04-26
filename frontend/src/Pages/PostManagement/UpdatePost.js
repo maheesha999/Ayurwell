@@ -21,7 +21,7 @@ function UpdatePost() {
     // Fetch the post details
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/posts/${id}`);
+        const response = await axios.get(`http://localhost:8080/posts/${id}`);//link
         const post = response.data;
         setTitle(post.title || ''); // Ensure title is not undefined
         setDescription(post.description || ''); // Ensure description is not undefined
