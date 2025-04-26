@@ -34,7 +34,7 @@ function AllPost() {
     // Fetch all posts from the backend
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/posts');//link 
+        const response = await axios.get('http://localhost:8080/posts');
         setPosts(response.data);
         setFilteredPosts(response.data); // Initially show all posts
 
