@@ -1,4 +1,4 @@
-# 📷 Photography Portfolio Website
+# 📷 Lens Learn
 
 A responsive and user-friendly photography portfolio website built with Spring Boot, Thymeleaf, and Bootstrap.
 
