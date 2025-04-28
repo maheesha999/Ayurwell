@@ -29,7 +29,6 @@ function MyAllPost() {
   const navigate = useNavigate();
   const loggedInUserID = localStorage.getItem('userID'); // Get the logged-in user's ID
 
-
   useEffect(() => {
     // Fetch all posts from the backend
     const fetchPosts = async () => {
@@ -302,7 +301,7 @@ function MyAllPost() {
       <div className='continer' style={{ 
         position: 'relative',
         minHeight: '100vh',
-        backgroundColor: '#f9f9f9',//background
+        backgroundColor: '#f9f9f9',
         paddingBottom: '50px',
         paddingTop: '20px'
       }}>

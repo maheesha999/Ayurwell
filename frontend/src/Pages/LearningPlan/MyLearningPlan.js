@@ -93,7 +93,7 @@ function MyLearningPlan() {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              marginBottom: '15px',//margin
+              marginBottom: '15px',
               borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
               paddingBottom: '10px'
             }}>
@@ -614,7 +614,6 @@ function MyLearningPlan() {
           >
             <IoIosCreate className='add_new_btn_icon' style={{ fontSize: '24px' }}/>
           </div>
-   
           
           <div className='post_card_continer'>
             {filteredPosts.length === 0 ? (
