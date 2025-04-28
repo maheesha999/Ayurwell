@@ -84,8 +84,8 @@ function MyAchievements() {
         <div style={{ 
           position: 'absolute', 
           top: 0, 
-          left: 0,
-          width: '100%',
+          left: 0, 
+          width: '100%', 
           height: '100%', 
           background: 'linear-gradient(135deg, rgba(65, 105, 225, 0.7), rgba(219, 112, 147, 0.8))', 
           zIndex: 1 

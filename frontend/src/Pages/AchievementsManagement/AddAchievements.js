@@ -324,10 +324,11 @@ function AddAchievements() {
                 }}
               >
                 <option value="" disabled>Select a category</option>
-                <option value="Tech">Tech</option>
-                <option value="Programming">Programming</option>
-                <option value="Cooking">Cooking</option>
-                <option value="Photography">Photography</option>
+                <option value="Portrait Photography">Portrait Photography</option>
+                <option value="Landscape Photography">Landscape Photography</option>
+                <option value="Wildlife Photography">Wildlife Photography</option>
+                <option value="Fashion Photography">Fashion Photography</option>
+                <option value="Wedding Photography">Wedding Photography</option>
               </select>
             </div>
 

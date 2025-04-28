@@ -20,8 +20,8 @@ function AllPost() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [postOwners, setPostOwners] = useState({});
-  const [showMyPosts, setShowMyPosts] = useState(false);//state
-  const [isModalOpen, setIsModalOpen] = useState(false);// State to track followed model
+  const [showMyPosts, setShowMyPosts] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null);
   const [followedUsers, setFollowedUsers] = useState([]); // State to track followed users
   const [newComment, setNewComment] = useState({}); // State for new comments

@@ -100,7 +100,7 @@ function AddLearningPlan() {
         postOwnerID,
         postOwnerName,
         imageUrl,
-        templateID,  // New field
+        templateID,
         startDate, // New field
         endDate,   // New field
         category   // New field
@@ -162,8 +162,7 @@ function AddLearningPlan() {
         margin: '20px auto',
         padding: '0 15px'
       }}>
-
-         {/* Keep template preview container as is */}
+        {/* Keep template preview container as is */}
         <div className="template-preview-container">
           {/* Template 1 */}
           <div className="template template-1">
@@ -451,11 +450,12 @@ function AddLearningPlan() {
                   backgroundColor: '#fff'
                 }}
               >
-                <option value="">Select Category</option>
-                <option value="Tech">Tech</option>
-                <option value="Programming">Programming</option>
-                <option value="Cooking">Cooking</option>
-                <option value="Photography">Photography</option>
+               <option value="" disabled>Select a category</option>
+                <option value="Portrait Photography">Portrait Photography</option>
+                <option value="Landscape Photography">Landscape Photography</option>
+                <option value="Wildlife Photography">Wildlife Photography</option>
+                <option value="Fashion Photography">Fashion Photography</option>
+                <option value="Wedding Photography">Wedding Photography</option>
               </select>
             </div>
 

@@ -16,8 +16,8 @@ public class LearningPlanModel {
     private String id;
     private String title;
     private String description;
-    private String contentURL;
-    private List<String> tags;
+    private String contentURL;//Link to video/content (YouTube, etc.)
+    private List<String> tags;//A list of keywords (tags) related to the plan
     private String postOwnerID; // Use postOwnerID consistently
     private String postOwnerName;
     private String createdAt;

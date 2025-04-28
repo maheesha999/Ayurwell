@@ -27,7 +27,6 @@ function UpdateLearningPost() {
   const [showImageUploadInput, setShowImageUploadInput] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -72,7 +71,7 @@ function UpdateLearningPost() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    processImageFile(file);//image
+    processImageFile(file);
   };
 
   const processImageFile = (file) => {
@@ -630,11 +629,12 @@ function UpdateLearningPost() {
                   backgroundColor: '#fff'
                 }}
               >
-                <option value="">Select Category</option>
-                <option value="Tech">Tech</option>
-                <option value="Programming">Programming</option>
-                <option value="Cooking">Cooking</option>
-                <option value="Photography">Photography</option>
+              <option value="" disabled>Select a category</option>
+                <option value="Portrait Photography">Portrait Photography</option>
+                <option value="Landscape Photography">Landscape Photography</option>
+                <option value="Wildlife Photography">Wildlife Photography</option>
+                <option value="Fashion Photography">Fashion Photography</option>
+                <option value="Wedding Photography">Wedding Photography</option>
               </select>
             </div>
 
