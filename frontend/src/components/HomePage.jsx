@@ -145,7 +145,7 @@ const HomePage = () => {
             {/* Floating Assistant Button */}
             <div className="fixed bottom-12 right-12 z-50">
                 <button
-                    onClick={() => navigate('/assistant')}
+                    onClick={() => navigate('/assistant-form')}
                     className="w-16 h-16 bg-center bg-cover hover:scale-105 transition-transform"
                     style={{
                         backgroundImage: `url(${assistantIcon})`,
