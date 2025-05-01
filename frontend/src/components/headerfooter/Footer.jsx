@@ -8,7 +8,8 @@ import FB from '../images/fb.png';
 const Footer = () => {
   return (
     <div className="bg-[#064521] text-white w-full md:mx-15 px-12 py-1"> 
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-4 my-10 mt-20 text-sm">
+     <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-4 my-4 text-sm">
+
         
         {/* Left Section */}
         <div>
@@ -49,7 +50,7 @@ const Footer = () => {
       {/* Copyright Section */}
       <div>
         <hr className="border-gray-500" />
-        <p className="py-5 text-sm text-center text-gray-300">
+        <p className="py-2 text-sm text-center text-gray-300">
           © 2024 AyurWell - All Rights Reserved.
         </p>
       </div>
