@@ -1,32 +1,33 @@
 footer {
     background-color: #064521;
     color: #fff;
-    padding: 20px 30px;
+    padding: 0px 0px; /* Keep small padding */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* 👈 Important: align content to top */
     flex-wrap: wrap;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 0; /* Remove rounded corners */
-    box-shadow: none; /* Remove shadow */
-    background-color: transparent; /* Optional: remove background color */
+    justify-content: center; /* Center nicely */
+    padding: 5px 10px; /* Reduce padding */
+    margin: 5px; /* Smaller margin */
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
 }
+
 
 
 /* Footer Social Media Icons */
 .social-media {
     display: flex;
-    
-    gap: 15px; /* Adds space between the icons */
-    padding: 10px 0; /* Adds padding around the icons */
+    gap: 10px; /* Smaller gap between icons */
+    padding: 5px 0; /* Less top-bottom padding */
 }
+
 
 .social-media a {
     display: inline-block;
@@ -34,8 +35,8 @@ footer {
 }
 
 .social-media img {
-    width: 30px; /* Set the width of the icons */
-    height: 30px; /* Set the height of the icons */
+    width: 25px;
+    height: 25px;
 }
 
 .social-media a:hover img {
@@ -55,5 +56,5 @@ footer {
 
 .powered-by {
     text-align: center;
-    margin: 10px 0;
+    margin: 5px 0; /* Reduce top-bottom margin */
 }

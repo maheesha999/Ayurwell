@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from '../../components/headerfooter/Header';
+import Footer from '../../components/headerfooter/Footer';
 
 const CreateBookingPage = () => {
   const location = useLocation();
@@ -106,6 +108,8 @@ const CreateBookingPage = () => {
   };
 
   return (
+    <div>
+    <Header />
     <div className="booking-container">
       <h2>Confirm Your Appointment</h2>
       {doctor ? (
@@ -156,9 +160,13 @@ const CreateBookingPage = () => {
             </button>
           </form>
         </div>
+        
       ) : (
         <p>Loading doctor details...</p>
       )}
+        </div>
+       <Footer />
+     
 
       <style>{`
         .booking-container {
