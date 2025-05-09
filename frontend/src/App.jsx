@@ -63,8 +63,7 @@ import DeliveryDashboard from './pages/DeliveryManagement/DeliveryDashboard';
 import EditDelivery from './pages/DeliveryManagement/EditDelivery';
 import ShowDelivery from './pages/DeliveryManagement/ShowDelivery';
 
-// Routes for the new Assistant Form
-import AssistantForm from './components/AssistantForm'; // Add this import for AssistantForm
+import ChatBox from './components/ChatBox';
 
 const App = () => {
   return (
@@ -132,8 +131,7 @@ const App = () => {
       <Route path='/records/edit/:id' element={<EditReturn />} />
       <Route path='/records/delete/:id' element={<DeleteReturn />} />
 
-      {/* Route for AssistantForm */}
-      <Route path='/assistant-form' element={<AssistantForm />} /> {/* Add the route for AssistantForm */}
+      <Route path='/chatbox' element={<ChatBox/>} />
     </Routes>
   );
 };
