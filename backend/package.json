@@ -12,11 +12,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "axios": "^1.7.6",
+    "axios": "^1.9.0",
     "body-parser": "^1.20.3",
     "cloudinary": "^2.6.0",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.2",
     "jspdf": "^2.5.2",
@@ -26,6 +26,7 @@
     "multer-storage-cloudinary": "^4.0.0",
     "nodemon": "^3.1.4",
     "notistack": "^3.0.1",
+    "openai": "^4.98.0",
     "react-router-dom": "^6.26.1",
     "uuid": "^10.0.0"
   }
