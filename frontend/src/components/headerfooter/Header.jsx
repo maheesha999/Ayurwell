@@ -1,46 +1,48 @@
 import React from 'react';
-import './Header.css'; // Add CSS in separate file
-import { useNavigate } from 'react-router-dom';
+import './Header.css';
+import { useNavigate, Link } from 'react-router-dom';
 import logo from '../images/logo2.png';
-import cartIcon from '../images/cart.png'
+import cartIcon from '../images/cart.png';
 
 const Header = () => {
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
 
     const handleCartClick = () => {
-        navigate('/cart'); // Navigate to cart page
+        navigate('/cart');
     };
+
     return (
         <header>
             <div className="logo2">
-                <img src={logo} alt=" Logo" className="logo-img" />
-                
+                <img src={logo} alt="Logo" className="logo-img" />
             </div>
+
             <nav>
                 <ul>
-                <li><a href="/doctors/card">Doctors</a></li>
-                <li><a href="/products/card">Herbal Store</a></li>
-                <li><a href="/deliverys">My Orders</a></li>
-                    <li><a href="/about">About Us</a></li>
-    
-                    
+                    <li><Link to="/doctors/card">Doctors</Link></li>
+                    <li><Link to="/products/card">Herbal Store</Link></li>
+                    <li><Link to="/deliverys">My Orders</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to="/feedback">Feedback</Link></li>
                 </ul>
             </nav>
+
             <div className="search-login">
                 <input type="text" placeholder="Search..." />
-                <button classname="search-btn">Search</button>
-                <img 
-                    src={cartIcon} 
-                    alt="Cart" 
-                    className="cart-icon" 
-                    onClick={handleCartClick} // Add onClick handler here
-                />             
+                <button className="search-btn">Search</button>
+                <img
+                    src={cartIcon}
+                    alt="Cart"
+                    className="cart-icon"
+                    onClick={handleCartClick}
+                />
             </div>
+
             <button
-              className='login'
-              onClick={() => navigate('/login')}
+                className='login'
+                onClick={() => navigate('/login')}
             >
-               LogOut
+                LogOut
             </button>
         </header>
     );

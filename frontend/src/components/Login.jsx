@@ -9,7 +9,7 @@ const Login = () => {
     const dashboardRoutes = {
         maheesha: '/create/payments',
         dasun: '/products',
-        navo: '/feedbacks',
+        dilu: '/feedback',
         diluka: '/mchats',
         nesha: '/deliverys',
         dasu: '/ayurvedicTips',
@@ -24,7 +24,7 @@ const Login = () => {
         const users = {
             maheesha: 'payment123',
             dasun: 'product123',
-            navo: 'feedback123',
+            dilu: 'feedback123',
             diluka: 'chat123',
             nesha: 'delivery123',
             dasu: 'ayurvedicTips123',
