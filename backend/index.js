@@ -5,6 +5,7 @@ import cors from 'cors';
 import path from 'path'; // Import path module
 import { Record } from "./models/returnModel.js";
 import { fileURLToPath } from 'url'; // Import fileURLToPath
+import dotenv from 'dotenv';
 
 
 import productsRoute from './routes/productsRoute.js';
@@ -12,7 +13,6 @@ import paymentsRoute from './routes/paymentsRoute.js';
 import paymentExpensesRoute from './routes/paymentExpensesRoute.js'
 import eventsssRoute from './routes/eventsssRoute.js';
 import deliverysRoute from './routes/deliverysRoute.js';
-import feedbackRoute from './routes/feedbackRoute.js';
 import mChatRoute from './routes/mChatRoute.js';
 import cChatRoute from './routes/cChatRoute.js';
 import recordRoute from './routes/recordRoute.js';
@@ -20,6 +20,9 @@ import doctorsRoute from './routes/doctorsRoute.js';
 import bookingsRoute from "./routes/bookingsRoute.js";
 import { configureCloudinary } from "./cloudinaryConfig.js";
 import { cloudinaryFileUploader } from "./Middlewares/FileUplaoder.js";
+import feedbackRoute from './routes/feedbackRoutes.js';
+
+dotenv.config();
 
 // Get directory name from URL
 const __filename = fileURLToPath(import.meta.url);
@@ -57,12 +60,13 @@ app.use('/payment', paymentsRoute);
 app.use('/expenses', paymentExpensesRoute);
 app.use('/events', eventsssRoute);
 app.use('/deliverys', deliverysRoute);
-app.use('/feedbacks', feedbackRoute);
 app.use('/mchats', mChatRoute);
 app.use('/cchats', cChatRoute);
 app.use('/records', recordRoute);
 app.use('/doctors',doctorsRoute);
 app.use('/booking',bookingsRoute);
+app.use('/feedbacks', feedbackRoute);
+
 
 // Define your Cloudinary credentials here
 const CLOUDINARY_NAME = "dyzcloigq";

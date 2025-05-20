@@ -63,6 +63,8 @@ import DeliveryDashboard from './pages/DeliveryManagement/DeliveryDashboard';
 import EditDelivery from './pages/DeliveryManagement/EditDelivery';
 import ShowDelivery from './pages/DeliveryManagement/ShowDelivery';
 
+import FeedbackPage from './components/FeedbackPage';
+
 const App = () => {
   return (
     <Routes>
@@ -128,6 +130,10 @@ const App = () => {
       <Route path='/records/details/:id' element={<ShowReturn />} />
       <Route path='/records/edit/:id' element={<EditReturn />} />
       <Route path='/records/delete/:id' element={<DeleteReturn />} />
+
+       <Route path="/feedback" element={<FeedbackPage />} />
+
+
     </Routes>
   );
 };
