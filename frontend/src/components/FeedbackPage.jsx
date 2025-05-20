@@ -5,7 +5,9 @@ import { FaStar, FaEdit, FaTrash, FaRocket } from 'react-icons/fa';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import feedbackBg from '../assets/feedbackBackground.jpg'; // ✅ Imported correctly
+import feedbackBg from '../assets/feedbackBackground.jpg';
+import Header from './headerfooter/Header';
+import Footer from './headerfooter/Footer';
 
 const COLORS = ['#FF6666', '#FFBB28', '#00C49F', '#0088FE', '#845EC2'];
 
@@ -140,13 +142,13 @@ const FeedbackPage = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* ✅ Blurred Background Image using imported asset */}
+      <Header />
+
       <div
         className="absolute inset-0 z-0 bg-cover bg-center blur-sm brightness-75 opacity-10"
         style={{ backgroundImage: `url(${feedbackBg})` }}
       ></div>
 
-      {/* Foreground Content */}
       <motion.div
         className="relative z-10 max-w-7xl mx-auto px-4 py-8"
         initial={{ opacity: 0 }}
@@ -234,6 +236,8 @@ const FeedbackPage = () => {
           </motion.div>
         </div>
       </motion.div>
+
+      <Footer />
     </div>
   );
 };
