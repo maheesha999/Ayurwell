@@ -25,6 +25,7 @@ import pro5 from '../assets/pro5.jpg';
 import Header from './headerfooter/Header';
 import Footer from './headerfooter/Footer';
 import FeedbackSection from './FeedbackSection';
+import ChatBox from './ChatBox';
 
 
 
@@ -213,6 +214,7 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
+            <ChatBox/>
             <FeedbackSection />
             <Footer />
         </div>
