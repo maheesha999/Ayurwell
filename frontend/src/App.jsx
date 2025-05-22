@@ -64,6 +64,8 @@ import EditDelivery from './pages/DeliveryManagement/EditDelivery';
 import ShowDelivery from './pages/DeliveryManagement/ShowDelivery';
 
 import FeedbackPage from './components/FeedbackPage';
+import ChatBox from './components/ChatBox';
+
 
 const App = () => {
   return (
@@ -131,7 +133,8 @@ const App = () => {
       <Route path='/records/edit/:id' element={<EditReturn />} />
       <Route path='/records/delete/:id' element={<DeleteReturn />} />
 
-       <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
+      <Route path="/chatbox" element={<ChatBox />} />
 
 
     </Routes>
