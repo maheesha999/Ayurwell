@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import doctorData from '../data/doctorData.jsx';
 import assistantIcon from '../assets/MediAssistant.png';
@@ -9,6 +8,7 @@ const ChatBox = () => {
   ]);
   const [input, setInput] = useState('');
   const [showChat, setShowChat] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(false);
   const messageEndRef = useRef(null);
 
   const handleSend = () => {
@@ -22,28 +22,33 @@ const ChatBox = () => {
     const knownDistricts = Object.keys(doctorData);
     const matchedDistrict = words.find(word => knownDistricts.includes(word));
 
-    if (matchedDistrict) {
-      const doctors = doctorData[matchedDistrict];
-      const doctorMessages = doctors.map(doc =>
-        `🧑‍⚕️ ${doc.name}
+    setIsBuffering(true); // Show spinner
+
+    setTimeout(() => {
+      setIsBuffering(false); // Hide spinner
+
+      if (matchedDistrict) {
+        const doctors = doctorData[matchedDistrict];
+        doctors.forEach((doc, index) => {
+          setTimeout(() => {
+            const message = `🧑‍⚕️ ${doc.name}
 📍 Address: ${doc.address}
 📞 Phone: ${doc.phone}
-🌿 Specialization: ${doc.specialization}`
-      );
-      setMessages(prev => [
-        ...prev,
-        ...doctorMessages.map(text => ({ from: 'bot', text }))
-      ]);
-    } else {
-      setMessages(prev => [...prev, { from: 'bot', text: "❌ Sorry, I couldn't find doctors for that district." }]);
-    }
+🌿 Specialization: ${doc.specialization}`;
+            setMessages(prev => [...prev, { from: 'bot', text: message }]);
+          }, index * 700); // Show one doctor every 700ms
+        });
+      } else {
+        setMessages(prev => [...prev, { from: 'bot', text: "❌ Sorry, I couldn't find doctors for that district." }]);
+      }
+    }, 1500); // Initial buffering time
   };
 
   useEffect(() => {
     if (messageEndRef.current) {
       messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messages]);
+  }, [messages, isBuffering]);
 
   const toggleChatbox = () => {
     setShowChat(!showChat);
@@ -61,9 +66,7 @@ const ChatBox = () => {
         <button
           onClick={toggleChatbox}
           className="w-[70px] h-[120px] bg-center bg-cover hover:scale-110 transition-transform shadow-xl rounded-full animate-pop"
-          style={{
-            backgroundImage: `url(${assistantIcon})`,
-          }}
+          style={{ backgroundImage: `url(${assistantIcon})` }}
           aria-label="Smart Assistant"
         />
       </div>
@@ -81,14 +84,22 @@ const ChatBox = () => {
               ×
             </button>
           </div>
+
           <div className="overflow-y-scroll h-[360px] p-4 bg-white rounded-b-2xl">
             {messages.map((msg, idx) => (
               <div key={idx} className="mb-3 whitespace-pre-line text-sm leading-snug text-gray-800 animate-fade-in">
                 <strong>{msg.from === 'bot' ? 'Medi Helper' : 'You'}:</strong> {msg.text}
               </div>
             ))}
+            {isBuffering && (
+              <div className="flex items-center justify-center py-2 animate-fade-in">
+                <div className="w-6 h-6 border-4 border-blue-400 border-dotted rounded-full animate-spin"></div>
+                <span className="ml-2 text-sm text-gray-600">Searching doctors...</span>
+              </div>
+            )}
             <div ref={messageEndRef} />
           </div>
+
           <div className="flex gap-2 p-3 border-t border-gray-300 bg-gray-50 rounded-b-2xl">
             <input
               value={input}
@@ -96,9 +107,11 @@ const ChatBox = () => {
               onKeyDown={e => e.key === 'Enter' && handleSend()}
               className="flex-1 px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition text-sm"
               placeholder="Enter your district..."
+              disabled={isBuffering}
             />
             <button
               onClick={handleSend}
+              disabled={isBuffering}
               className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md text-sm transition shadow-sm"
             >
               Send
@@ -117,8 +130,11 @@ const ChatBox = () => {
         .animate-slide-in {
           animation: slideInUp 0.5s ease-in-out;
         }
-        .hover\:animate-ping-slow:hover {
+        .hover\\:animate-ping-slow:hover {
           animation: ping 1s infinite;
+        }
+        .animate-spin {
+          animation: spin 1s linear infinite;
         }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
@@ -131,6 +147,10 @@ const ChatBox = () => {
         @keyframes slideInUp {
           from { transform: translateY(50px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
       `}</style>
     </>
