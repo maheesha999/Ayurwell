@@ -4,7 +4,6 @@ import axios from 'axios';
 import hom11 from '../assets/Hom11.jpg';
 import mainAyurveda from '../assets/Main-Ayurveda.jpg';
 import banner3 from '../assets/banner-3.jpg';
-import assistantIcon from '../assets/MediAssistant.png';
 
 // Top Doctors images
 import doc1 from '../assets/doc1.png';
@@ -26,6 +25,7 @@ import pro5 from '../assets/pro5.jpg';
 import Header from './headerfooter/Header';
 import Footer from './headerfooter/Footer';
 import FeedbackSection from './FeedbackSection';
+import ChatBox from './ChatBox';
 
 
 
@@ -214,100 +214,7 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
-            
-
-            {/* Floating Assistant Button */}
-            <div className="fixed bottom-12 right-12 z-50">
-                <button
-                    onClick={toggleChatbox}
-                    className="w-[60px] h-[110px] bg-center bg-cover hover:scale-105 transition-transform"
-                    style={{
-                        backgroundImage: `url(${assistantIcon})`,
-                    }}
-                    aria-label="Smart Assistant"
-                />
-            </div>
-
-            {/* Chatbox Modal */}
-            {isChatboxOpen && (
-                <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white rounded-lg w-[350px] h-[450px] flex flex-col overflow-hidden">
-                        {/* Chat Header */}
-                        <div className="bg-green-600 text-white p-4 flex justify-between items-center">
-                            <h3 className="text-xl font-semibold">Ayurveda Assistant</h3>
-                            <button 
-                                onClick={toggleChatbox} 
-                                className="text-white hover:text-gray-200"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        {/* Chat Messages */}
-                        <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
-                            {chatMessages.length === 0 ? (
-                                <div className="text-center text-gray-500 mt-10">
-                                    <p>Hello! How can I assist you with Ayurvedic remedies or finding a doctor today?</p>
-                                </div>
-                            ) : (
-                                <div className="space-y-4">
-                                    {chatMessages.map((msg, index) => (
-                                        <div 
-                                            key={index} 
-                                            className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                                        >
-                                            <div 
-                                                className={`max-w-[80%] p-3 rounded-lg ${
-                                                    msg.sender === 'user' 
-                                                        ? 'bg-green-500 text-white rounded-br-none' 
-                                                        : 'bg-white border border-gray-200 text-gray-800 rounded-bl-none'
-                                                }`}
-                                            >
-                                                <p>{msg.text}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                    {isLoading && (
-                                        <div className="flex justify-start">
-                                            <div className="bg-white border border-gray-200 p-3 rounded-lg rounded-bl-none">
-                                                <div className="flex space-x-2">
-                                                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce"></div>
-                                                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                                                    <div className="w-2 h-2 bg-gray-300 rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                    <div ref={chatEndRef} />
-                                </div>
-                            )}
-                        </div>
-                        
-                        {/* Input Form */}
-                        <form onSubmit={handleSendMessage} className="p-3 bg-white border-t border-gray-200 flex">
-                            <input
-                                type="text"
-                                value={userInput}
-                                onChange={(e) => setUserInput(e.target.value)}
-                                placeholder="Type your message..."
-                                className="flex-1 border border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                                disabled={isLoading}
-                            />
-                            <button
-                                type="submit"
-                                className="bg-green-600 text-white px-4 py-2 rounded-r-lg hover:bg-green-700 disabled:bg-green-400"
-                                disabled={isLoading || !userInput.trim()}
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            )}
+            <ChatBox/>
             <FeedbackSection />
             <Footer />
         </div>
